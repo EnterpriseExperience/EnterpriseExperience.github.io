@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rayfield-Style Documentation</title>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet"> <!-- Syntax Highlighting Theme -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    header {
+      background: #222;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+    header h1 {
+      margin: 0;
+      color: #ffcc00;
+      font-size: 2rem;
+    }
+    nav {
+      background: #333;
+      padding: 1rem;
+    }
+    nav a {
+      color: #ffcc00;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    pre {
+      background: #282c34;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "Courier New", Courier, monospace;
+    }
+    footer {
+      background: #222;
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+      margin-top: 2rem;
+      border-top: 2px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rayfield UI Documentation</h1>
+  </header>
+
+  <nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#examples">Examples</a>
+    <a href="#api">API</a>
+  </nav>
+
+  <div class="container">
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        Welcome to the documentation for the Rayfield-inspired UI library! This page provides all the information 
+        you need to get started and use this library effectively.
+      </p>
+    </section>
+
+    <section id="examples">
+      <h2>Examples</h2>
+      <p>Below is an example of how to use the library:</p>
+      <pre><code class="language-lua">
+-- Create a new UI window
+local Window = Rayfield:CreateWindow({
+    Name = "My First Window",
+    LoadingTitle = "Loading Example",
+    LoadingSubtitle = "Please wait...",
+    ConfigurationSaving = true
+})
+
+-- Add a button
+Window:CreateButton({
+    Name = "Click Me",
+    Callback = function()
+        print("Button clicked!")
+    end
+})
+      </code></pre>
+    </section>
+
+    <section id="api">
+      <h2>API</h2>
+      <p>Here's a quick overview of the API functions:</p>
+      <pre><code class="language-lua">
+-- Create a new Window
+Rayfield:CreateWindow({
+    Name = string,
+    LoadingTitle = string,
+    LoadingSubtitle = string,
+    ConfigurationSaving = boolean
+})
+
+-- Create a Button
+Window:CreateButton({
+    Name = string,
+    Callback = function()
+        -- code here
+    end
+})
+      </code></pre>
+    </section>
+  </div>
+
+  <footer>
+    <p>Rayfield UI Documentation © 2025</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script> <!-- Lua syntax highlighting -->
+</body>
+</html>

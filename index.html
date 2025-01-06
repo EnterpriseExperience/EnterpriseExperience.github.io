@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zacks Easy Hub | Documentation</title>
-  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet"> <!-- Modern Darker Theme -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -49,7 +49,7 @@
       margin: 1rem 0;
     }
     .discord-button img {
-      width: 300px; /* Increased size for logo */
+      width: 300px; /* Increased size for the logo */
       cursor: pointer;
       border-radius: 8px;
       transition: transform 0.3s ease;
@@ -60,20 +60,20 @@
     pre {
       position: relative;
       background: #2d2d2d;
-      padding: 1rem 1rem 1rem 1rem;
+      padding: 1rem;
       border-radius: 8px;
       overflow-x: auto;
       margin-bottom: 1.5rem;
       color: #f8f8f2;
-      white-space: pre; /* Preserve spacing */
     }
     code {
       font-family: "Courier New", Courier, monospace;
+      white-space: pre; /* Ensures spacing is preserved */
     }
     .copy-button {
       position: absolute;
-      top: 8px;
-      right: 8px;
+      top: 10px;
+      right: 10px;
       background: #444;
       color: #fff;
       border: none;
@@ -81,7 +81,7 @@
       border-radius: 5px;
       font-size: 0.9rem;
       cursor: pointer;
-      z-index: 10; /* Ensures it stays on top */
+      z-index: 1; /* Ensures it stays on top */
     }
     .copy-button:hover {
       background: #666;
@@ -186,7 +186,7 @@ Window:CreateButton({
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script> <!-- Lua syntax highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script>
   <script>
     function copyToClipboard(button) {
       const code = button.nextElementSibling.innerText;

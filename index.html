@@ -71,8 +71,8 @@
     }
     .copy-button {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 8px;
+      right: 8px;
       background: #444;
       color: #fff;
       border: none;
@@ -80,6 +80,7 @@
       border-radius: 5px;
       font-size: 0.9rem;
       cursor: pointer;
+      z-index: 10; /* Ensures it stays on top */
     }
     .copy-button:hover {
       background: #666;
@@ -138,21 +139,29 @@
       <div class="intro-title">Loading Zacks Easy Hub Module</div>
 
       <!-- Code box 1 -->
-      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()</code></pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()</code>
+      </pre>
 
       <!-- Small fancy/modern text -->
       <div class="small-text">Example argument-usage</div>
 
       <!-- Code box 2 -->
-      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()
  
-ZEH_Module:Fly(10, true)</code></pre>
+ZEH_Module:Fly(10, true)</code>
+      </pre>
     </section>
 
     <section id="api">
       <h2>API</h2>
       <p>Here's a quick overview of the API functions:</p>
-      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">-- Create a new Window
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">-- Create a new Window
 Rayfield:CreateWindow({
     Name = string,
     LoadingTitle = string,
@@ -166,7 +175,8 @@ Window:CreateButton({
     Callback = function()
         -- code here
     end
-})</code></pre>
+})</code>
+      </pre>
     </section>
   </div>
 

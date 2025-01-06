@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rayfield-Style Documentation</title>
-  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet"> <!-- Syntax Highlighting Theme -->
+  <title>Zacks Easy Hub | Documentation</title>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet"> <!-- Modern Darker Theme -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -44,13 +44,31 @@
       padding: 1rem;
     }
     pre {
-      background: #282c34;
+      position: relative;
+      background: #2d2d2d;
       padding: 1rem;
       border-radius: 8px;
       overflow-x: auto;
+      margin-bottom: 1.5rem;
+      color: #f8f8f2;
     }
     code {
       font-family: "Courier New", Courier, monospace;
+    }
+    .copy-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .copy-button:hover {
+      background: #666;
     }
     footer {
       background: #222;
@@ -64,7 +82,7 @@
 </head>
 <body>
   <header>
-    <h1>Rayfield UI Documentation</h1>
+    <h1>Zacks Easy Hub | Documentation</h1>
   </header>
 
   <nav>
@@ -77,15 +95,14 @@
     <section id="introduction">
       <h2>Introduction</h2>
       <p>
-        Welcome to the documentation for the Rayfield-inspired UI library! This page provides all the information 
-        you need to get started and use this library effectively.
+        Welcome to our WIP documentation-landing page, where we innovate and empower success no matter the cost, but except the cost is nothing.
       </p>
     </section>
 
     <section id="examples">
       <h2>Examples</h2>
       <p>Below is an example of how to use the library:</p>
-      <pre><code class="language-lua">
+      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">
 -- Create a new UI window
 local Window = Rayfield:CreateWindow({
     Name = "My First Window",
@@ -107,7 +124,7 @@ Window:CreateButton({
     <section id="api">
       <h2>API</h2>
       <p>Here's a quick overview of the API functions:</p>
-      <pre><code class="language-lua">
+      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">
 -- Create a new Window
 Rayfield:CreateWindow({
     Name = string,
@@ -128,10 +145,19 @@ Window:CreateButton({
   </div>
 
   <footer>
-    <p>Rayfield UI Documentation © 2025</p>
+    <p>Zacks Easy Hub Documentation © 2025</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script> <!-- Lua syntax highlighting -->
+  <script>
+    function copyToClipboard(button) {
+      const code = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        button.innerText = "Copied!";
+        setTimeout(() => (button.innerText = "Copy"), 2000);
+      });
+    }
+  </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
     header h1 {
       margin: 0;
       color: #ffcc00;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     nav {
       background: #333;
@@ -49,7 +49,7 @@
       margin: 1rem 0;
     }
     .discord-button img {
-      width: 150px;
+      width: 300px; /* Increased size for logo */
       cursor: pointer;
       border-radius: 8px;
       transition: transform 0.3s ease;
@@ -92,6 +92,18 @@
       margin-top: 2rem;
       border-top: 2px solid #444;
     }
+    .intro-title {
+      font-size: 1.8rem;
+      color: #ffcc00;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .small-text {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      text-align: center;
+      margin: 1rem 0;
+    }
   </style>
 </head>
 <body>
@@ -121,22 +133,20 @@
 
     <section id="examples">
       <h2>Examples</h2>
-      <p>Below is an example of how to use the library:</p>
-      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">-- Create a new UI window
-local Window = Rayfield:CreateWindow({
-    Name = "My First Window",
-    LoadingTitle = "Loading Example",
-    LoadingSubtitle = "Please wait...",
-    ConfigurationSaving = true
-})
 
--- Add a button
-Window:CreateButton({
-    Name = "Click Me",
-    Callback = function()
-        print("Button clicked!")
-    end
-})</code></pre>
+      <!-- Medium fancy/modern sized white text -->
+      <div class="intro-title">Loading Zacks Easy Hub Module</div>
+
+      <!-- Code box 1 -->
+      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()</code></pre>
+
+      <!-- Small fancy/modern text -->
+      <div class="small-text">Example argument-usage</div>
+
+      <!-- Code box 2 -->
+      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()
+ 
+ZEH_Module:Fly(10, true)</code></pre>
     </section>
 
     <section id="api">

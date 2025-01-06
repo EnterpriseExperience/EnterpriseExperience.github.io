@@ -43,6 +43,20 @@
       margin: 2rem auto;
       padding: 1rem;
     }
+    .discord-button {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+    .discord-button img {
+      width: 150px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .discord-button img:hover {
+      transform: scale(1.1);
+    }
     pre {
       position: relative;
       background: #2d2d2d;
@@ -99,11 +113,16 @@
       </p>
     </section>
 
+    <div class="discord-button">
+      <a href="https://discord.gg/VJh3kkYzBn" target="_blank">
+        <img src="https://i.ibb.co/Mgtjry5/Zacks-Easy-Hub-LLC-Official-Logo.jpg" alt="Join our Discord">
+      </a>
+    </div>
+
     <section id="examples">
       <h2>Examples</h2>
       <p>Below is an example of how to use the library:</p>
-      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">
--- Create a new UI window
+      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">-- Create a new UI window
 local Window = Rayfield:CreateWindow({
     Name = "My First Window",
     LoadingTitle = "Loading Example",
@@ -117,15 +136,13 @@ Window:CreateButton({
     Callback = function()
         print("Button clicked!")
     end
-})
-      </code></pre>
+})</code></pre>
     </section>
 
     <section id="api">
       <h2>API</h2>
       <p>Here's a quick overview of the API functions:</p>
-      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">
--- Create a new Window
+      <pre><button class="copy-button" onclick="copyToClipboard(this)">Copy</button><code class="language-lua">-- Create a new Window
 Rayfield:CreateWindow({
     Name = string,
     LoadingTitle = string,
@@ -139,8 +156,7 @@ Window:CreateButton({
     Callback = function()
         -- code here
     end
-})
-      </code></pre>
+})</code></pre>
     </section>
   </div>
 

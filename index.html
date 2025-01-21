@@ -49,7 +49,7 @@
       margin: 1rem 0;
     }
     .discord-button img {
-      width: 300px; /* Increased size for the logo */
+      width: 300px;
       cursor: pointer;
       border-radius: 8px;
       transition: transform 0.3s ease;
@@ -68,7 +68,7 @@
     }
     code {
       font-family: "Courier New", Courier, monospace;
-      white-space: pre; /* Ensures spacing is preserved */
+      white-space: pre-wrap;
     }
     .copy-button {
       position: absolute;
@@ -81,7 +81,7 @@
       border-radius: 5px;
       font-size: 0.9rem;
       cursor: pointer;
-      z-index: 1; /* Ensures it stays on top */
+      z-index: 10;
     }
     .copy-button:hover {
       background: #666;
@@ -136,19 +136,15 @@
     <section id="examples">
       <h2>Examples</h2>
 
-      <!-- Medium fancy/modern sized white text -->
       <div class="intro-title">Loading Zacks Easy Hub Module</div>
 
-      <!-- Code box 1 -->
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
         <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()</code>
       </pre>
 
-      <!-- Small fancy/modern text -->
       <div class="small-text">Example argument-usage</div>
 
-      <!-- Code box 2 -->
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
         <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()
@@ -189,7 +185,7 @@ Window:CreateButton({
   <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script>
   <script>
     function copyToClipboard(button) {
-      const code = button.nextElementSibling.innerText;
+      const code = button.nextElementSibling.innerText.trim();
       navigator.clipboard.writeText(code).then(() => {
         button.innerText = "Copied!";
         setTimeout(() => (button.innerText = "Copy"), 2000);

@@ -60,7 +60,7 @@
     pre {
       position: relative;
       background: #2d2d2d;
-      padding: 1rem;
+      padding: 1.5rem;
       border-radius: 8px;
       overflow-x: auto;
       margin-bottom: 1.5rem;
@@ -72,8 +72,8 @@
     }
     .copy-button {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 8px;
+      right: 8px;
       background: #444;
       color: #fff;
       border: none;
@@ -140,16 +140,20 @@
 
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()</code>
+        <code class="language-lua">
+local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()
+        </code>
       </pre>
 
       <div class="small-text">Example argument-usage</div>
 
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()
+        <code class="language-lua">
+local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()
 
-ZEH_Module:Fly(10, true)</code>
+ZEH_Module:Fly(10, true)
+        </code>
       </pre>
     </section>
 
@@ -158,7 +162,8 @@ ZEH_Module:Fly(10, true)</code>
       <p>Here's a quick overview of the API functions:</p>
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">-- Create a new Window
+        <code class="language-lua">
+-- Create a new Window
 Rayfield:CreateWindow({
     Name = string,
     LoadingTitle = string,
@@ -172,7 +177,8 @@ Window:CreateButton({
     Callback = function()
         -- code here
     end
-})</code>
+})
+        </code>
       </pre>
     </section>
   </div>

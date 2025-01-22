@@ -65,16 +65,15 @@
       margin-bottom: 1.5rem;
       color: #f8f8f2;
       overflow-x: auto;
-      white-space: nowrap;
+      white-space: nowrap; /* Forces single-line code */
     }
     code {
       font-family: "Courier New", Courier, monospace;
     }
     .copy-button {
-      position: sticky;
-      top: 0;
-      right: 0;
-      margin: 8px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
       background: #444;
       color: #fff;
       border: none;
@@ -83,7 +82,6 @@
       font-size: 0.9rem;
       cursor: pointer;
       z-index: 10;
-      float: right;
     }
     .copy-button:hover {
       background: #666;

@@ -60,15 +60,15 @@
     pre {
       position: relative;
       background: #2d2d2d;
-      padding: 1.5rem;
+      padding: 1rem;
       border-radius: 8px;
-      overflow-x: auto;
       margin-bottom: 1.5rem;
       color: #f8f8f2;
+      overflow-x: auto;
+      white-space: nowrap;
     }
     code {
       font-family: "Courier New", Courier, monospace;
-      white-space: pre-wrap;
     }
     .copy-button {
       position: absolute;
@@ -140,20 +140,14 @@
 
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">
-local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()
-        </code>
+        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()</code>
       </pre>
 
       <div class="small-text">Example argument-usage</div>
 
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">
-local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()
-
-ZEH_Module:Fly(10, true)
-        </code>
+        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))() ZEH_Module:Fly(10, true)</code>
       </pre>
     </section>
 
@@ -162,23 +156,7 @@ ZEH_Module:Fly(10, true)
       <p>Here's a quick overview of the API functions:</p>
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">
--- Create a new Window
-Rayfield:CreateWindow({
-    Name = string,
-    LoadingTitle = string,
-    LoadingSubtitle = string,
-    ConfigurationSaving = boolean
-})
-
--- Create a Button
-Window:CreateButton({
-    Name = string,
-    Callback = function()
-        -- code here
-    end
-})
-        </code>
+        <code class="language-lua">Rayfield:CreateWindow({ Name = string, LoadingTitle = string, LoadingSubtitle = string, ConfigurationSaving = boolean })</code>
       </pre>
     </section>
   </div>

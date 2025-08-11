@@ -60,15 +60,13 @@
     pre {
       position: relative;
       background: #2d2d2d;
-      padding: 1rem;
+      padding: 1rem 3rem 1rem 1rem;
       border-radius: 8px;
       margin-bottom: 1.5rem;
       color: #f8f8f2;
       overflow-x: auto;
-      white-space: nowrap; /* Forces single-line code */
-    }
-    code {
-      font-family: "Courier New", Courier, monospace;
+      white-space: pre-wrap;
+      word-break: break-word;
     }
     .copy-button {
       position: absolute;
@@ -110,7 +108,7 @@
 </head>
 <body>
   <header>
-    <h1>Zacks Easy Hub | Documentation</h1>
+    <h1>Flames Hub | Documentation</h1>
   </header>
 
   <nav>
@@ -127,20 +125,14 @@
       </p>
     </section>
 
-    <div class="discord-button">
-      <a href="https://discord.gg/VJh3kkYzBn" target="_blank">
-        <img src="https://i.ibb.co/Mgtjry5/Zacks-Easy-Hub-LLC-Official-Logo.jpg" alt="Join our Discord">
-      </a>
-    </div>
-
     <section id="examples">
       <h2>Examples</h2>
 
-      <div class="intro-title">Loading Zacks Easy Hub Module</div>
+      <div class="intro-title">Introduction | Flames Hub Module</div>
 
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))()</code>
+        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/Flame_Hubs_API.lua'))()</code>
       </pre>
 
       <div class="small-text">Example argument-usage</div>

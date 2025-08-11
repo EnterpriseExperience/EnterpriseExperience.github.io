@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the official Flames Hub documentation page, empowering success.
+Welcome to the official Flames Hub documentation page, enjoy our BETA API!
 
 ---
 

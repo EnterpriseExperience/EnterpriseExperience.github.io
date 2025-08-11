@@ -6,8 +6,6 @@ Welcome to the official Flames Hub documentation page, enjoy our BETA API!
 
 ---
 
-## Examples
-
 ## © | Flames Hub API | ©
 
 ### Loadstring | Setup.

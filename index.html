@@ -65,10 +65,9 @@
       margin-bottom: 1.5rem;
       color: #f8f8f2;
       overflow-x: auto;
-      white-space: pre-wrap;
-      word-break: break-word;
+      white-space: pre;
+      word-break: normal;
     }
-
     .copy-button {
       position: absolute;
       top: 8px;
@@ -236,11 +235,12 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"></script>
   <script>
     function copyToClipboard(button) {
-      const code = button.nextElementSibling.innerText.trim();
-      navigator.clipboard.writeText(code).then(() => {
-        button.innerText = "Copied!";
-        setTimeout(() => (button.innerText = "Copy"), 2000);
-      });
+        let lines = button.nextElementSibling.innerText.split('\n');
+        let trimmed = lines.map(line => line.trimEnd()).join('\n');
+        navigator.clipboard.writeText(trimmed).then(() => {
+            button.innerText = "Copied!";
+            setTimeout(() => (button.innerText = "Copy"), 2000);
+        });
     }
   </script>
 </body>

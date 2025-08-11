@@ -7,5 +7,5 @@ Where you can make script creating easier, without having to ChatGPT everything 
 
 We have made it extremely simple to make defining services, your own Character, Humanoid and essential functions easier for you to introduce in your script!
 
-Check out our API below:
+Check out our API here:
 https://enterpriseexperience.github.io/

@@ -69,9 +69,9 @@
       word-break: break-word;
     }
     .copy-button {
-      position: absolute;
-      top: 8px;
+      position: sticky;
       right: 8px;
+      top: 8px;
       background: #444;
       color: #fff;
       border: none;
@@ -80,9 +80,6 @@
       font-size: 0.9rem;
       cursor: pointer;
       z-index: 10;
-    }
-    .copy-button:hover {
-      background: #666;
     }
     footer {
       background: #222;
@@ -132,14 +129,14 @@
 
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/Flame_Hubs_API.lua'))()</code>
+        <code class="language-lua">local Flames_API = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/Flame_Hubs_API.lua'))()</code>
       </pre>
 
-      <div class="small-text">Example argument-usage</div>
+      <div class="small-text">Example | Usage:</div>
 
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">local ZEH_Module = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/zacks_easy_module.lua'))() ZEH_Module:Fly(10, true)</code>
+        <code class="language-lua">local Flames_API = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/Flame_Hubs_API.lua'))() Flames_API.BypassWalkSpeed()</code>
       </pre>
     </section>
 
@@ -148,13 +145,90 @@
       <p>Here's a quick overview of the API functions:</p>
       <pre>
         <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <code class="language-lua">Rayfield:CreateWindow({ Name = string, LoadingTitle = string, LoadingSubtitle = string, ConfigurationSaving = boolean })</code>
+        <code class="language-lua">Flames_API.BypassWalkSpeed()</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">Flames_API.BypassJumpPower()</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local PlayerGui = Flames_API.PlayerGui</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local Character = Flames_API.Character</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local Humanoid = Flames_API.Humanoid</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local HumanoidRootPart = Flames_API.HumanoidRootPart</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local Head = Flames_API.Head</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local SeatPart = Flames_API.SeatPart</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local LocalPlayer = Flames_API.LocalPlayer</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">
+          -- Can Be Shortened.
+          -- Supports DisplayName.
+          -- Supports Username.
+          -- You cannot target yourself.
+          local Target = Flames_API.FindPlayer("User Here.")
+
+          if Target then
+             print(Target.Name)
+          end
+        </code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">
+          -- Works on ANY executor.
+          local Executor_Name = Flames_API.ExecutorName()
+        </code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">local Current_Vehicle = Flames_API.Vehicle()</code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">
+          function Set_WalkSpeed(Number)
+              Flames_API.WalkSpeed(Number)
+          end
+        </code>
+      </pre>
+      <pre>
+        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+        <code class="language-lua">
+          function Teleport_To_Player(Player)
+              local Target = Flames_API.FindPlayer(Player)
+
+              if Target and Target.Character then
+                  HumanoidRootPart.CFrame = CFrame.new(Target.Character:FindFirstChild("HumanoidRootPart").Position)
+              end
+          end
+        </code>
       </pre>
     </section>
   </div>
 
   <footer>
-    <p>Zacks Easy Hub Documentation © 2025</p>
+    <p>Flames Hub | Documentation Page : Official | © Licensed Trademark 2025 ©</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>

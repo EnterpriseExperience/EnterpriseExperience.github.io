@@ -69,6 +69,12 @@ local StarterGui = Flames_API.Service("StarterGui")
 -- etc/add other services. --
 ```
 
+### Notifying the user.
+```lua
+-- "5" is how long it'll stay in the bottom right corner (duration/time) --
+Flames_API.notify("Title", "Content", 5)
+```
+
 ### Vehicles.
 ```lua
 -- Only works if you are currently in a vehicle! --
@@ -111,6 +117,17 @@ print(LocalPlayer.Name)
 local Randomized_String = Flames_API.RandomString("hello?") -- String input
 
 print(Randomized_String)
+```
+
+### Fly functionality (R15 and R6 supported!).
+```lua
+-- "10" is the speed (numbers only). --
+Flames_API.Fly(10)
+```
+
+### Unfly.
+```lua
+Flames_API.Unfly()
 ```
 
 ### WalkSpeed changer.

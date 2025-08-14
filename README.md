@@ -8,40 +8,48 @@ Welcome to the official Flames Hub documentation page, enjoy our BETA API!
 
 ## © | Flames Hub API | ©
 
-### Loadstring | Setup.
+### Loadstring | Setup (required).
 ```lua
 -- Setup --
 local Flames_API = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/Flame_Hubs_API.lua'))()
 ```
 
-### Character.
+### Character initialization.
 ```lua
--- Get your Character --
 local Character = Flames_API.Character
 ```
 
 ### Head.
 ```lua
--- Get your Head --
 local Head = Flames_API.Head
+
+if Head then
+    print(Head.Name)
+end
 ```
 
 ### HumanoidRootPart.
 ```lua
--- Get your HumanoidRootPart --
 local HumanoidRootPart = Flames_API.HumanoidRootPart
+
+if HumanoidRootPart then
+    print(HumanoidRootPart.Name)
+end
 ```
 
 ### PlayerGui.
 ```lua
--- Get your PlayerGui --
 local PlayerGui = Flames_API.PlayerGui
+
+if PlayerGui then
+    print(PlayerGui.Name)
+end
 ```
 
 ### Executor Name.
 ```lua
--- Works on ANY executor --
--- Prints the current executor (just the Name of the executor, doesn't include the version) --
+-- Works on ANY executor. --
+-- Prints just the Name of the executor, doesn't include the version or other details. --
 local Executor_Name = Flames_API.ExecutorName()
 
 print(Executor_Name)
@@ -49,8 +57,8 @@ print(Executor_Name)
 
 ### Services.
 ```lua
--- Services --
--- Utilizes and protects services via 'cloneref' (if supported) --
+-- CAN protect services via 'cloneref' (if supported) --
+-- EXAMPLES: --
 local Players = Flames_API.Service("Players")
 local ReplicatedStorage = Flames_API.Service("ReplicatedStorage")
 local Workspace = Flames_API.Service("Workspace")
@@ -58,12 +66,12 @@ local ReplicatedFirst = Flames_API.Service("ReplicatedFirst")
 local VoiceChatInternal = Flames_API.Service("VoiceChatInternal")
 local VoiceChatService = Flames_API.Service("VoiceChatService")
 local StarterGui = Flames_API.Service("StarterGui")
--- etc --
+-- etc/add other services. --
 ```
 
 ### Vehicles.
 ```lua
--- Grabbing 'Vehicle' Model's (if you're sitting in one) --
+-- Only works if you are currently in a vehicle! --
 local Vehicle = Flames_API.Vehicle()
 
 if Vehicle then
@@ -71,7 +79,7 @@ if Vehicle then
 end
 ```
 
-### Find-Player functionality.
+### Target player(s) functionality.
 ```lua
 -- Targetting other players --
 -- Supports shortened Usernames/DisplayNames --
@@ -86,15 +94,13 @@ end
 
 ### SeatPart.
 ```lua
--- Seat Part (if you're sitting down in a Model)
 local Current_SeatPart = Flames_API.SeatPart
 
 print(Current_SeatPart)
 ```
 
-### LocalPlayer.
+### Defining LocalPlayer.
 ```lua
--- Defining LocalPlayer --
 local LocalPlayer = Flames_API.LocalPlayer
 
 print(LocalPlayer.Name)
@@ -102,8 +108,7 @@ print(LocalPlayer.Name)
 
 ### Random string generation.
 ```lua
--- Randomizing Strings (Credits: Infinite Yield) --
-local Randomized_String = Flames_API.RandomString("hello?")
+local Randomized_String = Flames_API.RandomString("hello?") -- String input
 
 print(Randomized_String)
 ```
@@ -128,7 +133,7 @@ end
 Change_JP(100)
 ```
 
-### Teleport to other players.
+### Teleport/GoTo to other players.
 ```lua
 -- Teleport to any player --
 local Target = Flames_API.FindPlayer("Roblox")
@@ -144,7 +149,6 @@ end
 
 ### WalkSpeed Anti-Cheat Bypass (getconnections only!)
 ```lua
--- Bypass WalkSpeed (getconnections only!) --
 local Get_Connections = getconnections or get_signal_cons
 
 if not Get_Connections then return warn("Your executor does not support 'getconnections'!") end
@@ -156,7 +160,6 @@ end
 
 ### JumpPower Anti-Cheat Bypass (getconnections only!)
 ```lua
--- Bypass JumpPower (getconnections only!) --
 -- Bypasses JumpPower AND JumpHeight --
 local Get_Connections = getconnections or get_signal_cons
 

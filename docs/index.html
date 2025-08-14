@@ -3,34 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>Flames Hub API | Documentation</title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">
+  <link id="theme-link" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">
   <style>
-    html {
-      background-color: #1e1e1e !important;
+    html, body {
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     body {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    .markdown-section {
+      background-color: transparent;
+      color: inherit;
+    }
+
+    body.dark-mode {
       background-color: #1e1e1e !important;
       color: #ff0000 !important;
     }
-    .markdown-section {
+    body.dark-mode .markdown-section {
       background-color: transparent !important;
       color: #ff0000 !important;
     }
-    pre code {
+    body.dark-mode pre code {
       background-color: #2d2d2d !important;
     }
-    .docsify-copy-code-button {
+    body.dark-mode .docsify-copy-code-button {
       background: #333 !important;
       color: #fff !important;
       border: 1px solid #555 !important;
     }
-    .docsify-copy-code-button:hover {
+    body.dark-mode .docsify-copy-code-button:hover {
       background: #444 !important;
+    }
+
+    #theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 8px 12px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+    #theme-toggle:hover {
+      background-color: #555;
+    }
+    body.dark-mode #theme-toggle {
+      background-color: #ccc;
+      color: #000;
+    }
+    body.dark-mode #theme-toggle:hover {
+      background-color: #aaa;
     }
   </style>
 </head>
 <body>
   <div id="app">Loading...</div>
+  <button id="theme-toggle">🌙 Dark</button>
+
   <script>
     window.$docsify = {
       name: 'Flames Hub',
@@ -40,7 +76,36 @@
         errorText: 'Error',
         successText: 'Copied!'
       }
+    };
+
+    const themeLink = document.getElementById('theme-link');
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      themeLink.href = '//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css';
+      toggleButton.textContent = '☀️ Light';
+    } else {
+      body.classList.remove('dark-mode');
+      themeLink.href = '//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css';
+      toggleButton.textContent = '🌙 Dark';
     }
+
+    toggleButton.addEventListener('click', () => {
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        themeLink.href = '//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css';
+        toggleButton.textContent = '🌙 Dark';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.add('dark-mode');
+        themeLink.href = '//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css';
+        toggleButton.textContent = '☀️ Light';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>

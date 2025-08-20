@@ -28,6 +28,15 @@ if Head then
 end
 ```
 
+### Humanoid
+```lua
+local Humanoid = Flames_API.Humanoid
+
+if Humanoid then
+    print(Humanoid.Name)
+end
+```
+
 ### HumanoidRootPart.
 ```lua
 local HumanoidRootPart = Flames_API.HumanoidRootPart

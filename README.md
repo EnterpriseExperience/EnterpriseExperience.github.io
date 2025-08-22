@@ -8,6 +8,8 @@ Welcome to the official Flames Hub documentation page, enjoy our BETA API!
 
 ## © | Flames Hub API | ©
 
+[LICENSE AGREEMENT](https://github.com/EnterpriseExperience/MicUpSource/blob/main/LICENSE.md)
+
 ### Loadstring | Setup (required).
 ```lua
 -- Setup --

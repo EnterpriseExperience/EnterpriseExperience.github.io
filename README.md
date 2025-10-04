@@ -96,7 +96,7 @@ if Vehicle then
 end
 ```
 
-### Target player(s) functionality.
+### Targetting (FIXED + WORKING!).
 ```lua
 -- Targetting other players --
 -- Supports shortened Usernames/DisplayNames --
@@ -173,6 +173,11 @@ end
 if Target and Target.Character then
     Teleport_To_Player(Target)
 end
+```
+
+### Adonis Bypass
+```lua
+Flames_API.BypassAdonis()
 ```
 
 ### WalkSpeed Anti-Cheat Bypass (getconnections only!)

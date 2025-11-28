@@ -182,23 +182,23 @@ Flames_API.BypassAdonis()
 
 ### WalkSpeed Anti-Cheat Bypass (getconnections only!)
 ```lua
-local Get_Connections = getconnections or get_signal_cons
-
-if not Get_Connections then return warn("Your executor does not support 'getconnections'!") end
-
-if Get_Connections then
-    Flames_API.BypassWalkSpeed()
-end
+Flames_API.BypassWalkSpeed()
 ```
 
 ### JumpPower Anti-Cheat Bypass (getconnections only!)
 ```lua
 -- Bypasses JumpPower AND JumpHeight --
-local Get_Connections = getconnections or get_signal_cons
+Flames_API.BypassJumpPower()
+```
 
-if not Get_Connections then return warn("Your executor does not support 'getconnections'!") end
+### WalkSpeed - Anti-Cheat Bypass.
+```lua
+-- Bypass WalkSpeed (metatables) --
+Flames_API.BypassWS()
+```
 
-if Get_Connections then
-    Flames_API.BypassJumpPower()
-end
+### WalkSpeed - Anti-Cheat Bypass.
+```lua
+-- Bypass JumpPower/JumpHeight (metatables) --
+Flames_API.BypassJP()
 ```

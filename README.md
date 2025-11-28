@@ -16,7 +16,7 @@ Welcome to the official Flames Hub documentation page, enjoy our BETA API!
 local Flames_API = loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/Flame_Hubs_API.lua'))()
 ```
 
-### Character initialization.
+### Character.
 ```lua
 local Character = Flames_API.Character
 ```

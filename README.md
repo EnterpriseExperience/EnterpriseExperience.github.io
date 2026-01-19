@@ -197,7 +197,7 @@ Flames_API.BypassJumpPower()
 Flames_API.BypassWS()
 ```
 
-### WalkSpeed - Anti-Cheat Bypass.
+### JumpPower - Anti-Cheat Bypass.
 ```lua
 -- Bypass JumpPower/JumpHeight (metatables) --
 Flames_API.BypassJP()
